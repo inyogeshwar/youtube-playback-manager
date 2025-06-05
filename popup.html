@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>YouTube Playback Manager</title>
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>  <div class="container">
+    <div class="header">
+      <h1>YouTube Playback Manager</h1>
+      <div class="toggle-container">
+        <span>Enable</span>
+        <label class="switch">
+          <input type="checkbox" id="extension-toggle" checked>
+          <span class="slider round"></span>
+        </label>
+      </div>
+    </div>
+
+    <div class="nav-tabs">
+      <button class="nav-tab active" data-tab="basic">Basic Settings</button>
+      <button class="nav-tab" data-tab="advanced">Advanced Settings</button>
+    </div>
+    
+    <div id="basic-settings" class="settings-section active-section">
+      <h2>Basic Settings</h2>
+      
+      <div class="setting-row">
+        <label for="auto-pause-toggle">
+          Auto-pause other YouTube tabs
+          <span class="setting-description">Pause other tabs when a new YouTube video plays</span>
+        </label>
+        <label class="switch">
+          <input type="checkbox" id="auto-pause-toggle" checked>
+          <span class="slider round"></span>
+        </label>
+      </div>
+      
+      <div class="setting-row">
+        <label for="auto-play-toggle">
+          Auto-play on active tab
+          <span class="setting-description">Play video when tab becomes active</span>
+        </label>
+        <label class="switch">
+          <input type="checkbox" id="auto-play-toggle" checked>
+          <span class="slider round"></span>
+        </label>
+      </div>
+      
+      <div class="setting-row">
+        <label for="pause-inactive-toggle">
+          Pause when tab becomes inactive
+          <span class="setting-description">Pause video when switching to another tab</span>
+        </label>
+        <label class="switch">
+          <input type="checkbox" id="pause-inactive-toggle" checked>
+          <span class="slider round"></span>
+        </label>      </div>
+    </div>
+    
+    <div id="advanced-settings" class="settings-section">
+      <h2>Advanced Settings</h2>
+      <div class="accordion">
+        <div class="accordion-header">
+          <span>Silent Hours</span>
+          <svg class="chevron" viewBox="0 0 24 24"><path d="M7.41,8.58L12,13.17L16.59,8.58L18,10L12,16L6,10L7.41,8.58Z"/></svg>
+        </div>
+        <div class="accordion-content">
+          <div class="setting-row">
+            <label for="silent-hours-toggle">Enable Silent Hours</label>
+            <label class="switch">
+              <input type="checkbox" id="silent-hours-toggle">
+              <span class="slider round"></span>
+            </label>
+          </div>
+          
+          <div class="setting-row time-range">
+            <label>Time Range</label>
+            <div>
+              <input type="time" id="silent-start-time" value="22:00"> to 
+              <input type="time" id="silent-end-time" value="08:00">
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <div class="accordion">
+        <div class="accordion-header">
+          <span>Channel Whitelist</span>
+          <svg class="chevron" viewBox="0 0 24 24"><path d="M7.41,8.58L12,13.17L16.59,8.58L18,10L12,16L6,10L7.41,8.58Z"/></svg>
+        </div>
+        <div class="accordion-content">
+          <div class="whitelist-container">
+            <div id="whitelist-entries"></div>
+            <div class="add-whitelist">
+              <input type="text" id="channel-input" placeholder="Paste channel URL or ID">
+              <button id="add-channel-btn">Add</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <div class="accordion">
+        <div class="accordion-header">
+          <span>Other Options</span>
+          <svg class="chevron" viewBox="0 0 24 24"><path d="M7.41,8.58L12,13.17L16.59,8.58L18,10L12,16L6,10L7.41,8.58Z"/></svg>
+        </div>
+        <div class="accordion-content">
+          <div class="setting-row">
+            <label for="volume-norm-toggle">
+              Volume Normalization
+              <span class="setting-description">Keep volume consistent across videos</span>
+            </label>
+            <label class="switch">
+              <input type="checkbox" id="volume-norm-toggle">
+              <span class="slider round"></span>
+            </label>
+          </div>
+          
+          <div class="setting-row">
+            <label for="dark-mode-toggle">
+              Dark Mode
+              <span class="setting-description">Use dark theme for this popup</span>
+            </label>
+            <label class="switch">
+              <input type="checkbox" id="dark-mode-toggle">
+              <span class="slider round"></span>
+            </label>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <div class="footer">
+      <div class="shortcut-info">
+        <span>Toggle Shortcut: </span><kbd>Ctrl+Shift+Y</kbd>
+      </div>
+      <div class="version-info">v1.0.0</div>
+    </div>
+    
+    <div class="developer-footer">
+      <div class="developer-info">
+        <span>👨‍💻 Made with ❤️ by <a href="https://github.com/inyogeshwar" target="_blank">Yogeshwar Kumar</a></span>
+      </div>
+      <div class="support-link">
+        <a href="https://ko-fi.com/yogeshwarkumar" target="_blank">
+          <span class="coffee-icon">☕</span> Support Me
+        </a>
+      </div>
+    </div>
+  </div>
+    <script src="popup.js"></script>
+</body>
+</html>

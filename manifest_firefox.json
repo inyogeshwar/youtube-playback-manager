@@ -1,0 +1,49 @@
+{
+  "manifest_version": 2,
+  "name": "YouTube Playback Manager",
+  "version": "1.0.0",
+  "description": "Control YouTube playback across multiple tabs with automatic pause/play and other features",
+  "permissions": [
+    "storage",
+    "tabs",
+    "*://*.youtube.com/*"
+  ],
+  "background": {
+    "scripts": ["firefox_adapter.js", "background.js"]
+  },  "browser_action": {
+    "default_popup": "popup.html",
+    "default_icon": {
+      "16": "icons/icon16.png",
+      "32": "icons/icon32.png",
+      "48": "icons/icon48.png",
+      "128": "icons/icon128.png"
+    },
+    "default_title": "YouTube Playback Manager",
+    "browser_style": false
+  },
+  "icons": {
+    "16": "icons/icon16.png",
+    "32": "icons/icon32.png",
+    "48": "icons/icon48.png",
+    "128": "icons/icon128.png"
+  },
+  "commands": {
+    "toggle-youtube-control": {
+      "suggested_key": {
+        "default": "Ctrl+Shift+Y"
+      },
+      "description": "Toggle YouTube Playback Manager On/Off"
+    }
+  },
+  "content_scripts": [
+    {
+      "matches": ["*://*.youtube.com/*"],
+      "js": ["content.js"]
+    }
+  ],  "browser_specific_settings": {
+    "gecko": {
+      "id": "youtube-playback-manager@yogeshwarkumar.com",
+      "strict_min_version": "79.0"
+    }
+  }
+}
