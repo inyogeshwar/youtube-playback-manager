@@ -1,14 +1,13 @@
 
 
-````markdown
+
 # 🎬 YouTube Playback Manager
 
-![GitHub release](https://img.shields.io/github/v/release/inyogeshwar/youtube-playback-manager?style=for-the-badge)
-![License](https://img.shields.io/github/license/inyogeshwar/youtube-playback-manager?style=for-the-badge)
+
 
 > 🎯 A smart browser extension that manages YouTube playback across multiple tabs for a seamless viewing experience.
 
----
+
 
 ## ✨ Features
 
