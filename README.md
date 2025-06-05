@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # YouTube Playback Manager
 
 A Chrome extension that intelligently manages YouTube tab playback for a better viewing experience.
@@ -77,3 +78,7 @@ Contributions are welcome! Please feel free to submit a Pull Request.
 ## Support
 
 If you encounter any issues or have questions, please [open an issue](https://github.com/inyogeshwar/youtube-playback-manager/issues) on GitHub.
+=======
+# youtube-playback-manager
+A browser extension that intelligently manages YouTube tab playback for a better viewing experience
+>>>>>>> d1f863e64b6fc675501f48024648e7eb14df7720
